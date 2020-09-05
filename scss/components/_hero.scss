@@ -1,0 +1,90 @@
+.hero {
+  @include flex;
+  align-items: stretch;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  margin-bottom: 15rem;
+  margin-top: 5rem;
+
+  @media only screen and (max-width: $screenOne) {
+    padding: 4rem 3.4rem;
+  }
+
+  @media only screen and(max-width : $screenFour) {
+    padding: 4rem 6rem;
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and(max-width : $screenFour) {
+    padding: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__left {
+    z-index: 10;
+  }
+
+  & h1 {
+    line-height: 1;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    max-width: 70%;
+    @media only screen and (max-width: $screenThree) {
+      max-width: 80%;
+    }
+
+    @media only screen and(max-width : $screenFour) {
+      width: 95%;
+      font-size: 7rem;
+    }
+
+    @media only screen and(max-width : $screenFive) {
+      width: 100%;
+      font-size: 5rem;
+    }
+  }
+
+  & p {
+    margin-top: 5rem;
+    width: 32%;
+    line-height: 1.4;
+
+    @media only screen and (max-width: $screenThree) {
+      width: 40%;
+    }
+
+    @media only screen and(max-width : $screenFour) {
+      width: 70%;
+    }
+
+    @media only screen and(max-width : $screenFour) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 32%;
+    top: 16%;
+    z-index: -1;
+    width: 80.5rem;
+    margin-top: 10rem;
+    @media only screen and (max-width: $screenThree) {
+      width: 60rem;
+      top: 38%;
+    }
+
+    @media only screen and(max-width : $screenFour) {
+      display: none;
+    }
+  }
+
+  & .btn-primary {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      box-shadow: $shadow-secondary;
+    }
+  }
+}

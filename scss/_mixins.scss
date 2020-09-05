@@ -1,0 +1,28 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin btn-primary($bg-color: $color-primary, $color: white) {
+  @content;
+  padding: 1.7rem 4rem;
+  border-radius: 10rem;
+  display: inline-block;
+  background-color: $bg-color;
+  color: $color;
+  font-family: $font-family-secondary;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+  @media only screen and (max-width: $screenFour) {
+    font-size: 1.7rem;
+    padding: 1.7rem 3rem;
+  }
+
+  @media only screen and (max-width: $screenFive) {
+    font-size: 1.5rem;
+    padding: 1.5rem 3.2rem;
+  }
+}

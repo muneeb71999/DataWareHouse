@@ -1,0 +1,80 @@
+.heading {
+  &-primary {
+    font-family: $font-family-primary;
+    font-size: 8rem;
+    font-weight: 600;
+    color: $color-text-1;
+
+    @media only screen and (max-width: $screenFour) {
+      font-size: 6rem;
+    }
+  }
+
+  &-secondary {
+    font-family: $font-family-primary;
+    font-size: 4rem;
+    color: $color-text-1;
+    font-weight: bold;
+    line-height: 1;
+
+    @media only screen and (max-width: $screenFour) {
+      font-size: 3rem;
+    }
+  }
+
+  &-tertiary {
+    font-family: $font-family-primary;
+    font-size: 2.4rem;
+    color: $color-text-1;
+    font-weight: 500;
+    @media only screen and (max-width: $screenFour) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.text {
+  &-primary {
+    font-family: $font-family-secondary;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $color-text-2;
+    @media only screen and (max-width: $screenFour) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-secondary {
+    font-family: $font-family-secondary;
+    font-size: 1.6rem;
+    color: $color-text-2;
+    font-weight: 400;
+    @media only screen and (max-width: $screenFour) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn {
+  &-primary {
+    @include btn-primary;
+    margin-top: 5rem;
+  }
+
+  &-secondary {
+    @include btn-primary;
+    background-color: $color-secondary;
+  }
+
+  &-white {
+    @include btn-primary;
+    background-color: white;
+    color: $color-text-1;
+  }
+}
+
+.mt {
+  &-2 {
+    margin-top: 2rem;
+  }
+}

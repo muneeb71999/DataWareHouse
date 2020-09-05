@@ -1,0 +1,53 @@
+.about {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba($color: $color-secondary, $alpha: 0.15);
+  padding: 3rem 1rem;
+  border-radius: $border-radius;
+  @include flex;
+  @media only screen and (max-width: $screenTwo) {
+    padding: 3rem 2rem 3rem 0.5rem;
+  }
+
+  @media only screen and (max-width: $screenFour) {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  &__right {
+    margin-left: 4rem;
+
+    @media only screen and (max-width: $screenFour) {
+      padding: 3rem;
+      margin: 0;
+    }
+
+    @media only screen and (max-width: $screenFive) {
+      padding: 1.8rem;
+    }
+
+    & p {
+      width: 80%;
+      margin-top: 4rem;
+      line-height: 1.6;
+
+      @media only screen and(max-width : $screenFour) {
+        margin: 3rem auto 0 auto;
+        widows: 100%;
+      }
+    }
+  }
+
+  &__img {
+    width: 40rem;
+    @media only screen and (max-width: $screenTwo) {
+      width: 35rem;
+    }
+    @media only screen and (max-width: $screenFour) {
+      width: 30rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  justify-items: center;
+
+  width: 100%;
+  margin: 10rem auto 0 auto;
+  max-width: $max-width;
+  padding: 2rem 0;
+
+  @media only screen and (max-width: $screenOne) {
+    padding: 2rem 8rem;
+  }
+
+  @media only screen and (max-width: $screenThree) {
+    padding: 2rem 4rem;
+  }
+
+  @media only screen and(max-width : $screenFour) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 15rem;
+    margin: 5rem auto 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-items: start;
+  }
+
+  @media only screen and(max-width : $screenSix) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr) 15rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    gap: 4rem;
+  }
+
+  &__company-info {
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    width: 4.2rem;
+  }
+
+  &__brand {
+    margin-left: 1.2rem;
+    font-size: 2.2rem;
+  }
+
+  &__lists {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    justify-self: normal;
+  }
+
+  &__links {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+  &__link {
+    display: block;
+    color: $color-text-1;
+    padding: 5px 0;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  & * h2 {
+    font-size: 1.6rem;
+  }
+
+  &__social-media {
+    @media only screen and(max-width : $screenFour) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: inline-block;
+  background-color: transparentize($color: $color-tertiary, $amount: 0.8);
+  padding: 1rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+
+  & > img {
+    width: 2rem;
+    height: auto;
+    fill: none;
+  }
+}

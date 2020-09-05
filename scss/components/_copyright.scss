@@ -1,0 +1,16 @@
+.copyright {
+  font-size: 1.6rem;
+  max-width: $max-width;
+  margin: 2rem auto 0 auto;
+  width: 40rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  @media only screen and (max-width: $screenFour) {
+    width: 35rem;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: $screenFour) {
+    width: 60%;
+  }
+}

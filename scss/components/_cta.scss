@@ -1,0 +1,58 @@
+.cta {
+  @include flex;
+  max-width: $max-width;
+  margin: 10rem auto 0 auto;
+  padding: 4rem 1rem;
+  border-top: 2px solid transparentize($color: $color-secondary, $amount: 0.8);
+
+  @media only screen and (max-width: $screenOne) {
+    padding: 2rem 4rem;
+  }
+
+  @media only screen and (max-width: $screenTwo) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $screenFour) {
+    padding: 4rem 2rem;
+  }
+
+  &__left {
+    & .text-secondary {
+      margin-top: 1.6rem;
+    }
+  }
+
+  &__right {
+    @include flex;
+
+    & .btn-secondary,
+    & .btn-white {
+      transition: all 0.2s ease-in-out;
+      margin: 0 1rem;
+
+      &:hover {
+        box-shadow: $shadow-secondary;
+      }
+    }
+
+    @media only screen and (max-width: $screenTwo) {
+      margin-top: 3rem;
+    }
+    @media only screen and (max-width: $screenSix) {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  & .btn-white {
+    @include flex;
+
+    & svg {
+      width: 2.4rem;
+      margin-left: 1.2rem;
+    }
+  }
+}

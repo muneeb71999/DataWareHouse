@@ -1,0 +1,78 @@
+.navbar {
+  @include flex;
+  // max-width: $max-width;
+  width: 100%;
+  padding: 1rem 10rem;
+  margin: 0 auto;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  box-shadow: $shadow-primary;
+
+  @media only screen and (max-width: $screenOne) {
+    padding: 1rem 3.4rem;
+  }
+
+  &-wrapper {
+    background-color: white;
+  }
+
+  &__left {
+    @include flex;
+    justify-content: flex-start;
+  }
+
+  &__right {
+    align-self: stretch;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__btn {
+    @include flex;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    box-shadow: $shadow-primary;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: $color-text-1 !important;
+    transition: all 0.2s ease-in-out;
+
+    & svg {
+      width: 2.8rem;
+      margin-left: 1.4rem;
+      color: $color-primary;
+    }
+
+    &:hover {
+      box-shadow: $shadow-secondary;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: currentColor;
+    padding: 1rem 1.6rem;
+    margin: 0 0.2rem;
+    text-transform: capitalize;
+    font-weight: medium;
+    &:hover {
+      color: $color-primary;
+      // font-weight: 600;
+    }
+  }
+
+  &__list {
+    margin-left: 4rem;
+    font-size: 1.6rem;
+    color: $color-text-2;
+  }
+}

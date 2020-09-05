@@ -1,0 +1,99 @@
+.features {
+  max-width: $max-width;
+  margin: 15rem auto 0 auto;
+
+  & .heading-secondary {
+    text-align: center;
+    @media only screen and (max-width: $screenFour) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  & .text-primary {
+    text-align: center;
+    width: 50%;
+    min-width: 40rem;
+    margin: 2rem auto 0 auto;
+    @media only screen and (max-width: $screenFour) {
+      margin-bottom: 4rem;
+      min-width: 30rem;
+    }
+  }
+
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
+    gap: 5rem;
+    margin-top: 4rem;
+    width: 100%;
+
+    @media only screen and (max-width: $screenOne) {
+      padding: 1rem 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    @media only screen and (max-width: $screenTwo) {
+      max-width: 65rem;
+      margin: 0 auto;
+      gap: 4rem;
+    }
+  }
+
+  &__card {
+    @include flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 2rem 1rem;
+
+    @media only screen and (max-width: $screenOne) {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__img {
+      width: 20rem !important;
+      height: 20rem !important;
+    }
+
+    &__info {
+      margin-left: 2rem;
+
+      & .text-secondary {
+        text-justify: left;
+        width: 70%;
+        min-width: 16rem;
+        margin-bottom: 2.6rem;
+        margin-top: 2rem;
+        line-height: 1.6;
+
+        @media only screen and (max-width: $screenOne) {
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 5px;
+      font-size: 1.6rem;
+      color: $color-text-1;
+
+      & svg {
+        margin-left: 1rem;
+        width: 3.2rem;
+        color: $color-primary;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

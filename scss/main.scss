@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Rubik&display=swap" rel="stylesheet"');
+
+@import "./variable";
+@import "./mixins";
+@import "./utils";
+@import "./components/navbar";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/features";
+@import "./components/testimonials";
+@import "./components/cta";
+@import "./components/footer";
+@import "./components/copyright";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  color: $color-text-2;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.link-active {
+  color: $color-primary !important;
+}

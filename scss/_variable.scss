@@ -1,0 +1,44 @@
+:root {
+  --border-radius: 5rem;
+  --max-width: 112rem;
+}
+
+$font-family-primary: "Montserrat", sans-serif;
+$font-family-secondary: "Rubik", sans-serif;
+
+$color-primary: #9c69e2;
+$color-secondary: #f063b8;
+$color-tertiary: #68c9ba;
+$color-text-1: #212353;
+$color-text-2: #4b5d68;
+
+$shadow-primary: 0px 5px 5px
+  rgba(
+    $color: #4b5d68,
+    $alpha: 0.1,
+  );
+
+$shadow-secondary: 0px 5px 10px
+  rgba(
+    $color: #4b5d68,
+    $alpha: 0.4,
+  );
+
+$shadow-card: 0px 20px 8px rgba(156, 105, 226, 0.3);
+
+$max-width: var(--max-width);
+$border-radius: var(--border-radius);
+
+$screenOne: 1120px;
+$screenTwo: 880px;
+$screenThree: 950px;
+$screenFour: 750px;
+$screenFive: 620px;
+$screenSix: 520px;
+$screenSeven: 420px;
+
+@media only screen and (max-width: $screenOne) {
+  :root {
+    --border-radius: 0;
+  }
+}
