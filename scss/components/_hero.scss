@@ -44,6 +44,11 @@
       width: 100%;
       font-size: 5rem;
     }
+
+    @media only screen and(max-width : $screenSeven) {
+      width: 100%;
+      font-size: 3.2rem;
+    }
   }
 
   & p {
@@ -61,6 +66,10 @@
 
     @media only screen and(max-width : $screenFour) {
       width: 100%;
+    }
+
+    @media only screen and(max-width : $screenFive) {
+      margin-top: 2rem;
     }
   }
 

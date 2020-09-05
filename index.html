@@ -22,7 +22,6 @@
             <a href="#about" class="navbar__link scrollspy-link">About</a>
             <a href="#features" class="navbar__link scrollspy-link">features</a>
             <a href="#testimonials" class="navbar__link scrollspy-link">testimonials</a>
-            <!-- <a href="#signup" class="navbar__link">signup</a> -->
           </div>
         </div>
         <div class="navbar__right">
@@ -33,7 +32,18 @@
               <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
+          <button class="navbar-toggle">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="navbar-toggle-btn">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
+      </div>
+      <div class="navbar-mobile">
+        <div class="navbar-close">&times;</div>
+        <a href="#about" class="navbar__link scrollspy-link">About</a>
+        <a href="#features" class="navbar__link scrollspy-link">features</a>
+        <a href="#testimonials" class="navbar__link scrollspy-link">testimonials</a>
       </div>
     </div>
 
@@ -277,6 +287,21 @@
   const dots = document.querySelectorAll('.dot-link');
   const testimonials = document.querySelectorAll('.testimonials__card-box');
   const slide = document.querySelector('.testimonials-sliders');
+  const toggleBtn = document.querySelector('.navbar-toggle-btn');
+  const mobileNavbar = document.querySelector('.navbar-mobile');
+  const closeNavbar = document.querySelector('.navbar-close');
+  const mobileNavbarLinks = document.querySelectorAll(".navbar-mobile a");
+
+  mobileNavbarLinks.forEach(el => el.addEventListener("click", () => closeNavbar.click()))
+
+  toggleBtn.addEventListener('click', () => {
+    mobileNavbar.classList.add('navbar-active');
+  })
+
+  closeNavbar.addEventListener('click', () => {
+    mobileNavbar.classList.remove('navbar-active')
+  })
+
   const hammertime = new Hammer(slide);
   let clickCount = 0;
   hammertime.on('swipe', function (ev) {

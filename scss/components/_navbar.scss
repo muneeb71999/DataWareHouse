@@ -16,6 +16,10 @@
     padding: 1rem 3.4rem;
   }
 
+  @media only screen and(max-width : $screenSeven) {
+    padding: 1rem;
+  }
+
   &-wrapper {
     background-color: white;
   }
@@ -23,6 +27,9 @@
   &__left {
     @include flex;
     justify-content: flex-start;
+    @media only screen and (max-width: $screenTwo) {
+      padding: 1rem;
+    }
   }
 
   &__right {
@@ -33,6 +40,9 @@
 
   &__logo {
     height: 3.5rem;
+    @media only screen and(max-width : $screenSeven) {
+      height: 2.4rem;
+    }
   }
 
   &__btn {
@@ -55,6 +65,10 @@
     &:hover {
       box-shadow: $shadow-secondary;
     }
+
+    @media only screen and (max-width: $screenTwo) {
+      display: none;
+    }
   }
 
   &__link {
@@ -74,5 +88,71 @@
     margin-left: 4rem;
     font-size: 1.6rem;
     color: $color-text-2;
+
+    @media only screen and (max-width: $screenTwo) {
+      display: none;
+    }
   }
+}
+
+.navbar-toggle-btn {
+  color: red;
+  width: 3.2rem;
+  height: 3.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: $screenTwo) {
+    display: block;
+  }
+}
+
+.navbar-toggle {
+  border: none !important;
+  outline: none !important;
+  display: none;
+
+  @media screen and (max-width: $screenTwo) {
+    display: block;
+  }
+}
+
+.navbar-mobile {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100vh);
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.4s ease-in-out;
+
+  & > a {
+    font-size: 2rem;
+    display: inline-block;
+    margin: 1rem 0;
+  }
+}
+
+.navbar-close {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 3rem;
+
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+
+.navbar-active {
+  display: flex;
+  transform: translate(0, 0);
 }
