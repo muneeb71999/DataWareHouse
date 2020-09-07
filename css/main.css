@@ -311,9 +311,11 @@
 }
 
 .navbar-toggle-btn {
-  color: red;
+  color: #4b5d68;
   width: 3.2rem;
   height: 3.2rem;
+  background: white;
+  border: none;
 }
 
 .navbar-toggle-btn:hover {
@@ -466,7 +468,7 @@
 @media only screen and (max-width: 420px) {
   .hero h1 {
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 4rem;
   }
 }
 
@@ -1263,6 +1265,12 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 55%;
+  }
 }
 
 body {

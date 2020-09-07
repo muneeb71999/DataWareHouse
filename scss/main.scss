@@ -22,6 +22,10 @@
 
 html {
   font-size: 62.5%;
+
+  @media screen and (max-width: $screenSix) {
+    font-size: 55%;
+  }
 }
 
 body {

@@ -96,9 +96,11 @@
 }
 
 .navbar-toggle-btn {
-  color: red;
+  color: $color-text-2;
   width: 3.2rem;
   height: 3.2rem;
+  background: white;
+  border: none;
 
   &:hover {
     cursor: pointer;
